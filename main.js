@@ -15,7 +15,7 @@ function divide(a, b) {
 }
 
 let firstNum = 0;
-let secondNum;
+let secondNum = '';
 let operator;
 let result;
 
@@ -39,101 +39,81 @@ function addToDisplay(buttonContent) {
 
 let zeroBtn = document.querySelector("#zero");
 zeroBtn.addEventListener('click', () => {
-    secondNum = zeroBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += zeroBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let oneBtn = document.querySelector("#one");
 oneBtn.addEventListener('click', () => {
-    secondNum = oneBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += oneBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let twoBtn = document.querySelector("#two");
 twoBtn.addEventListener('click', () => {
-    secondNum = twoBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += twoBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let threeBtn = document.querySelector("#three");
 threeBtn.addEventListener('click', () => {
-    secondNum = threeBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += threeBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let fourBtn = document.querySelector("#four");
 fourBtn.addEventListener('click', () => {
-    secondNum = fourBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += fourBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let fiveBtn = document.querySelector("#five");
 fiveBtn.addEventListener('click', () => {
-    secondNum = fiveBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += fiveBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let sixBtn = document.querySelector("#six");
 sixBtn.addEventListener('click', () => {
-    secondNum = sixBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += sixBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let sevenBtn = document.querySelector("#seven");
 sevenBtn.addEventListener('click', () => {
-    secondNum = sevenBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += sevenBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let eightBtn = document.querySelector("#eight");
 eightBtn.addEventListener('click', () => {
-    secondNum = eightBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += eightBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
 let nineBtn = document.querySelector("#nine");
 nineBtn.addEventListener('click', () => {
-    secondNum = nineBtn.textContent;
-    if (firstNum == 0 && typeof operator == 'undefined') {
-        firstNum = operate(firstNum, secondNum, '+');
-        addToDisplay(firstNum);
-    } else if (typeof operator !== 'undefined') {
+    secondNum += nineBtn.textContent;
+    addToDisplay(secondNum);
+    if (typeof operator !== 'undefined') {
         addToDisplay(secondNum);
     }
 });
@@ -144,6 +124,8 @@ let addBtn = document.querySelector("#add");
 addBtn.addEventListener('click', () => {
     if (typeof operator == 'undefined') {
         operator = addBtn.textContent;
+        firstNum = operate(firstNum, secondNum, '+');
+        addToDisplay(firstNum);
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
@@ -155,6 +137,8 @@ let subtractBtn = document.querySelector("#subtract");
 subtractBtn.addEventListener('click', () => {
     if (typeof operator == 'undefined') {
         operator = subtractBtn.textContent;
+        firstNum = operate(firstNum, secondNum, '+');
+        addToDisplay(firstNum);
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
@@ -166,6 +150,8 @@ let multiplyBtn = document.querySelector("#multiply");
 multiplyBtn.addEventListener('click', () => {
     if (typeof operator == 'undefined') {
         operator = multiplyBtn.textContent;
+        firstNum = operate(firstNum, secondNum, '+');
+        addToDisplay(firstNum);
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
@@ -177,6 +163,8 @@ let divideBtn = document.querySelector("#divide");
 divideBtn.addEventListener('click', () => {
     if (typeof operator == 'undefined') {
         operator = divideBtn.textContent;
+        firstNum = operate(firstNum, secondNum, '+');
+        addToDisplay(firstNum);
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
