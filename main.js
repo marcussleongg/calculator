@@ -126,11 +126,13 @@ addBtn.addEventListener('click', () => {
         operator = addBtn.textContent;
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
+        secondNum = '';
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
         addToDisplay(result);
         operator = addBtn.textContent;
+        secondNum = '';
     }
 });
 let subtractBtn = document.querySelector("#subtract");
@@ -139,11 +141,13 @@ subtractBtn.addEventListener('click', () => {
         operator = subtractBtn.textContent;
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
+        secondNum = '';
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
         addToDisplay(result);
         operator = subtractBtn.textContent;
+        secondNum = '';
     }
 });
 let multiplyBtn = document.querySelector("#multiply");
@@ -152,11 +156,13 @@ multiplyBtn.addEventListener('click', () => {
         operator = multiplyBtn.textContent;
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
+        secondNum = '';
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
         addToDisplay(result);
         operator = multiplyBtn.textContent;
+        secondNum = '';
     }  
 });
 let divideBtn = document.querySelector("#divide");
@@ -165,11 +171,13 @@ divideBtn.addEventListener('click', () => {
         operator = divideBtn.textContent;
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
+        secondNum = '';
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
         addToDisplay(result);
         operator = divideBtn.textContent;
+        secondNum = '';
     }
 });
 
@@ -182,7 +190,7 @@ let clearBtn = document.querySelector("#clear");
 clearBtn.addEventListener('click', () => {
     display.textContent = '-';
     firstNum = 0;
-    secondNum = undefined;
+    secondNum = '';
     operator = undefined;
     result = undefined;
 })
