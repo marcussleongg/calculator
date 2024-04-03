@@ -30,22 +30,39 @@ function operate(first, second, op) {
     }
 }
 
-function addToDisplay() {
-    const added = document.createAttribute("p");
+let display = document.querySelector("#display");
+
+function addToDisplay(buttonContent) {
+    const added = document.createElement("div");
+    added.textContent = buttonContent;
     display.appendChild(added);
 }
 
-const display = document.querySelector("#display")
-const btnList = document.querySelectorAll("button")
-console.log(btnList);
-for (let i=0; i<btnList.length-1; i++) {
-    let //how to change this to a changing variable name? btnn = document.querySelector(btnList[i]);
-    //changing variable name.addEventListener('click', () => addToDisplay())
-}
-const testBtn = document.querySelector("button#zero");
-testBtn.addEventListener('click', () => {
-    console.log("0");
-})
-//btn.addEventListener('click', () => {
-    //display.textContent = "0";
-//})
+let zeroBtn = document.querySelector("#zero");
+zeroBtn.addEventListener('click', () => addToDisplay(zeroBtn.textContent));
+let oneBtn = document.querySelector("#one");
+oneBtn.addEventListener('click', () => addToDisplay(oneBtn.textContent));
+let twoBtn = document.querySelector("#two");
+twoBtn.addEventListener('click', () => addToDisplay(twoBtn.textContent));
+let threeBtn = document.querySelector("#three");
+threeBtn.addEventListener('click', () => addToDisplay(threeBtn.textContent));
+let fourBtn = document.querySelector("#four");
+fourBtn.addEventListener('click', () => addToDisplay(fourBtn.textContent));
+let fiveBtn = document.querySelector("#five");
+fiveBtn.addEventListener('click', () => addToDisplay(fiveBtn.textContent));
+let sixBtn = document.querySelector("#six");
+sixBtn.addEventListener('click', () => addToDisplay(sixBtn.textContent));
+let sevenBtn = document.querySelector("#seven");
+sevenBtn.addEventListener('click', () => addToDisplay(sevenBtn.textContent));
+let eightBtn = document.querySelector("#eight");
+eightBtn.addEventListener('click', () => addToDisplay(eightBtn.textContent));
+let nineBtn = document.querySelector("#nine");
+nineBtn.addEventListener('click', () => addToDisplay(nineBtn.textContent));
+let addBtn = document.querySelector("#add");
+addBtn.addEventListener('click', () => addToDisplay(addBtn.textContent));
+let subtractBtn = document.querySelector("#subtract");
+subtractBtn.addEventListener('click', () => addToDisplay(subtractBtn.textContent));
+let multiplyBtn = document.querySelector("#multiply");
+multiplyBtn.addEventListener('click', () => addToDisplay(multiplyBtn.textContent));
+let divideBtn = document.querySelector("#divide");
+divideBtn.addEventListener('click', () => addToDisplay(divideBtn.textContent));
