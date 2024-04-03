@@ -189,3 +189,12 @@ let equalBtn = document.querySelector("#equal");
 equalBtn.addEventListener('click', () => {
     addToDisplay(operate(firstNum, secondNum, operator));
 })
+
+let clearBtn = document.querySelector("#clear");
+clearBtn.addEventListener('click', () => {
+    display.textContent = '-';
+    firstNum = 0;
+    secondNum = undefined;
+    operator = undefined;
+    result = undefined;
+})
