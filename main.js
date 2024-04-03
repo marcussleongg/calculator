@@ -34,9 +34,7 @@ function operate(first, second, op) {
 let display = document.querySelector("#display");
 
 function addToDisplay(buttonContent) {
-    const added = document.createElement("div");
-    added.textContent = buttonContent;
-    display.appendChild(added);
+    display.textContent = buttonContent;
 }
 
 let zeroBtn = document.querySelector("#zero");
@@ -139,6 +137,9 @@ nineBtn.addEventListener('click', () => {
         addToDisplay(secondNum);
     }
 });
+
+//first if statement is to check if it is the first time an operator is being selected//
+//else statement will display the result of the previous operator and numbers selected before assigning the new operator//
 let addBtn = document.querySelector("#add");
 addBtn.addEventListener('click', () => {
     if (typeof operator == 'undefined') {
