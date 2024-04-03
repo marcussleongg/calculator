@@ -34,7 +34,7 @@ function operate(first, second, op) {
 let display = document.querySelector("#display");
 
 function addToDisplay(buttonContent) {
-    const added = document.createElement("span");
+    const added = document.createElement("div");
     added.textContent = buttonContent;
     display.appendChild(added);
 }
@@ -46,9 +46,7 @@ zeroBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let oneBtn = document.querySelector("#one");
@@ -58,9 +56,7 @@ oneBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let twoBtn = document.querySelector("#two");
@@ -70,9 +66,7 @@ twoBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let threeBtn = document.querySelector("#three");
@@ -82,9 +76,7 @@ threeBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let fourBtn = document.querySelector("#four");
@@ -94,9 +86,7 @@ fourBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let fiveBtn = document.querySelector("#five");
@@ -106,9 +96,7 @@ fiveBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let sixBtn = document.querySelector("#six");
@@ -118,9 +106,7 @@ sixBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let sevenBtn = document.querySelector("#seven");
@@ -130,9 +116,7 @@ sevenBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let eightBtn = document.querySelector("#eight");
@@ -142,9 +126,7 @@ eightBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let nineBtn = document.querySelector("#nine");
@@ -154,24 +136,50 @@ nineBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
     } else if (typeof operator !== 'undefined') {
-        result = operate(firstNum, secondNum, operator);
-        firstNum = result;
-        addToDisplay(result);
+        addToDisplay(secondNum);
     }
 });
 let addBtn = document.querySelector("#add");
 addBtn.addEventListener('click', () => {
-    operator = addBtn.textContent;
+    if (typeof operator == 'undefined') {
+        operator = addBtn.textContent;
+    } else {
+        result = operate(firstNum, secondNum, operator);
+        firstNum = result;
+        addToDisplay(result);
+        operator = addBtn.textContent;
+    }
 });
 let subtractBtn = document.querySelector("#subtract");
 subtractBtn.addEventListener('click', () => {
-    operator = subtractBtn.textContent;
+    if (typeof operator == 'undefined') {
+        operator = subtractBtn.textContent;
+    } else {
+        result = operate(firstNum, secondNum, operator);
+        firstNum = result;
+        addToDisplay(result);
+        operator = subtractBtn.textContent;
+    }
 });
 let multiplyBtn = document.querySelector("#multiply");
 multiplyBtn.addEventListener('click', () => {
-    operator = multiplyBtn.textContent;
+    if (typeof operator == 'undefined') {
+        operator = multiplyBtn.textContent;
+    } else {
+        result = operate(firstNum, secondNum, operator);
+        firstNum = result;
+        addToDisplay(result);
+        operator = multiplyBtn.textContent;
+    }  
 });
 let divideBtn = document.querySelector("#divide");
 divideBtn.addEventListener('click', () => {
-    operator = divideBtn.textContent;
+    if (typeof operator == 'undefined') {
+        operator = divideBtn.textContent;
+    } else {
+        result = operate(firstNum, secondNum, operator);
+        firstNum = result;
+        addToDisplay(result);
+        operator = divideBtn.textContent;
+    }
 });
