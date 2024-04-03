@@ -184,3 +184,8 @@ divideBtn.addEventListener('click', () => {
         operator = divideBtn.textContent;
     }
 });
+
+let equalBtn = document.querySelector("#equal");
+equalBtn.addEventListener('click', () => {
+    addToDisplay(operate(firstNum, secondNum, operator));
+})
