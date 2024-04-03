@@ -33,8 +33,8 @@ function operate(first, second, op) {
 
 let display = document.querySelector("#display");
 
-function addToDisplay(buttonContent) {
-    display.textContent = buttonContent;
+function addToDisplay(content) {
+    display.textContent = content;
 }
 
 let zeroBtn = document.querySelector("#zero");
@@ -183,7 +183,11 @@ divideBtn.addEventListener('click', () => {
 
 let equalBtn = document.querySelector("#equal");
 equalBtn.addEventListener('click', () => {
-    addToDisplay(operate(firstNum, secondNum, operator));
+    if (operator == '/' && secondNum == 0) {
+        display.textContent = 'what';
+    } else {
+        addToDisplay(operate(firstNum, secondNum, operator));
+    }
 })
 
 let clearBtn = document.querySelector("#clear");
