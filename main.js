@@ -215,3 +215,9 @@ decimalBtn.addEventListener('click', () => {
     decimalBtn.disabled = true;
     addToDisplay(secondNum);
 })
+
+let deleteBtn = document.querySelector("#delete");
+deleteBtn.addEventListener('click', () => {
+    secondNum = secondNum.slice(0,secondNum.length-1);
+    addToDisplay(secondNum);
+})
