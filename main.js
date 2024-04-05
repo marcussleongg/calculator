@@ -219,5 +219,9 @@ decimalBtn.addEventListener('click', () => {
 let deleteBtn = document.querySelector("#delete");
 deleteBtn.addEventListener('click', () => {
     secondNum = secondNum.slice(0,secondNum.length-1);
-    addToDisplay(secondNum);
+    if (secondNum.length == 0) {
+        display.textContent = '-';
+    } else {
+        addToDisplay(secondNum);
+    }
 })
