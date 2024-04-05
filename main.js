@@ -129,7 +129,7 @@ addBtn.addEventListener('click', () => {
         secondNum = '';
         decimalBtn.disabled = false;
     } else {
-        result = operate(firstNum, secondNum, operator);
+        result = Math.round((operate(firstNum, secondNum, operator))*1000)/1000;
         firstNum = result;
         addToDisplay(result);
         operator = addBtn.textContent;
@@ -146,7 +146,7 @@ subtractBtn.addEventListener('click', () => {
         secondNum = '';
         decimalBtn.disabled = false;
     } else {
-        result = operate(firstNum, secondNum, operator);
+        result = Math.round((operate(firstNum, secondNum, operator))*1000)/1000;
         firstNum = result;
         addToDisplay(result);
         operator = subtractBtn.textContent;
@@ -163,7 +163,7 @@ multiplyBtn.addEventListener('click', () => {
         secondNum = '';
         decimalBtn.disabled = false;
     } else {
-        result = operate(firstNum, secondNum, operator);
+        result = Math.round((operate(firstNum, secondNum, operator))*1000)/1000;
         firstNum = result;
         addToDisplay(result);
         operator = multiplyBtn.textContent;
@@ -180,7 +180,7 @@ divideBtn.addEventListener('click', () => {
         secondNum = '';
         decimalBtn.disabled = false;
     } else {
-        result = operate(firstNum, secondNum, operator);
+        result = Math.round((operate(firstNum, secondNum, operator))*1000)/1000;
         firstNum = result;
         addToDisplay(result);
         operator = divideBtn.textContent;
@@ -194,7 +194,7 @@ equalBtn.addEventListener('click', () => {
     if (operator == '/' && secondNum == 0) {
         display.textContent = 'what';
     } else {
-        addToDisplay(operate(firstNum, secondNum, operator));
+        addToDisplay(Math.round((operate(firstNum, secondNum, operator))*1000)/1000);
         decimalBtn.disabled = false;
     }
 })
