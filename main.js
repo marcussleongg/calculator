@@ -127,12 +127,14 @@ addBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
         secondNum = '';
+        decimalBtn.disabled = false;
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
         addToDisplay(result);
         operator = addBtn.textContent;
         secondNum = '';
+        decimalBtn.disabled = false;
     }
 });
 let subtractBtn = document.querySelector("#subtract");
@@ -142,12 +144,14 @@ subtractBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
         secondNum = '';
+        decimalBtn.disabled = false;
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
         addToDisplay(result);
         operator = subtractBtn.textContent;
         secondNum = '';
+        decimalBtn.disabled = false;
     }
 });
 let multiplyBtn = document.querySelector("#multiply");
@@ -157,12 +161,14 @@ multiplyBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
         secondNum = '';
+        decimalBtn.disabled = false;
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
         addToDisplay(result);
         operator = multiplyBtn.textContent;
         secondNum = '';
+        decimalBtn.disabled = false;
     }  
 });
 let divideBtn = document.querySelector("#divide");
@@ -172,12 +178,14 @@ divideBtn.addEventListener('click', () => {
         firstNum = operate(firstNum, secondNum, '+');
         addToDisplay(firstNum);
         secondNum = '';
+        decimalBtn.disabled = false;
     } else {
         result = operate(firstNum, secondNum, operator);
         firstNum = result;
         addToDisplay(result);
         operator = divideBtn.textContent;
         secondNum = '';
+        decimalBtn.disabled = false;
     }
 });
 
@@ -187,6 +195,7 @@ equalBtn.addEventListener('click', () => {
         display.textContent = 'what';
     } else {
         addToDisplay(operate(firstNum, secondNum, operator));
+        decimalBtn.disabled = false;
     }
 })
 
@@ -197,4 +206,12 @@ clearBtn.addEventListener('click', () => {
     secondNum = '';
     operator = undefined;
     result = undefined;
+    decimalBtn.disabled = false;
+})
+
+let decimalBtn = document.querySelector("#decimal");
+decimalBtn.addEventListener('click', () => {
+    secondNum += decimalBtn.textContent;
+    decimalBtn.disabled = true;
+    addToDisplay(secondNum);
 })
