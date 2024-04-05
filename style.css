@@ -1,0 +1,42 @@
+#display {
+    background-color: pink;
+    color: red;
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+}
+
+#buttons {
+    background-color: #a1a2a4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+}
+
+#buttons * {
+    display: flex;
+    justify-content: flex-start;
+}
+
+#buttons * *{
+    font-size: 30px;
+    height: 90px;
+    width: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fourthrow {
+    margin-top: -90px;
+    margin-left: -90px;
+}
+
+#equal {
+    width: 180px;
+}
+
+#clear {
+    height: 180px;
+}
